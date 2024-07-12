@@ -1,0 +1,87 @@
+<button *ngIf='showtime' class="toggleFaces convert-time-button" (click)="toggleFaces()">Convert Time</button>
+<button *ngIf='!showtime' class="toggleFaces convert-time-button" (click)="toggleFaces()">Show Time</button>
+
+<div *ngIf='showtime' class="show-time" appSectionBorder>
+  <table>
+    <tr>
+      <td class="time-zone">Time (IST):</td>
+      <td>{{IST}}</td>
+    </tr>
+    <tr>
+      <td class="time-zone">Time (UTC):</td>
+      <td>{{UTC}}</td>
+    </tr>
+    <tr>
+      <td class="time-zone">Time (CET):</td>
+      <td>{{CET}}</td>
+    </tr>
+    <tr>
+      <td class="time-zone">Time (EST):</td>
+      <td>{{EST}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf='!showtime' class="show-time" appSectionBorder>
+  <form class="convert-time-form" (ngSubmit)="OnConvertTime()" #convertTime="ngForm">
+
+    <!-- Section 1 -->
+    <div class="select-time convert-time-common">
+      <div class="select-time-sub">
+        <input class="time-picker-input" #hourPicker1 (input)="moveFocus($event, hourPicker2)" (input)="hourPicker()"
+          name="hour1" ngModel type="number" min="0" max="9" placeholder="h" required />
+        <input class="time-picker-input" #hourPicker2 (input)="moveFocus($event, minutePicker1)" (input)="hourPicker()"
+          name="hour2" ngModel type="number" min="0" max="9" placeholder="h" required />
+      </div>
+      <div class="select-time-sub">
+        <input class="time-picker-input" #minutePicker1 (input)="moveFocus($event, minutePicker2)"
+          (input)="minutePicker()" name="minute1" ngModel type="number" min="0" max="9" placeholder="m" required />
+        <input class="time-picker-input" #minutePicker2 (input)="minutePicker()" name="minute2" ngModel type="number"
+          min="0" max="9" placeholder="m" required />
+      </div>
+      <div class="select-time-sub">
+        <input class="ampmtoggle-checkbox" type="checkbox" id="ampmtoggle" [(ngModel)]="ampm" name="ampmtoggle" checked>
+        <label class="ampmtoggle" for="ampmtoggle" (change)="toggleAmPm()">
+          <div class="ampm" [ngClass]="{'ampmActive': ampm}">AM</div>
+          <div class="ampm" [ngClass]="{'ampmActive': !ampm}">PM</div>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="convert-time convert-time-common">
+      <div class="time-zone-section convert-time-common-sub">
+
+        <select class="timeZoneSelect" id="timeZoneSelect" #timeZoneSelectfrom name="timeZoneSelectfrom"
+          [(ngModel)]="selectedTimeZoneFrom">
+          <option value="IST" selected>IST</option>
+          <option value="UTC">UTC</option>
+          <option value="CET">CET</option>
+          <option value="EST">EST</option>
+        </select>
+
+        <img src="assets/svg/arrow.svg" class="svgarrow" alt="SVG Image">
+
+        <select class="timeZoneSelect" id="timeZoneSelect" #timeZoneSelectto name="timeZoneSelectto"
+          [(ngModel)]="selectedTimeZoneTo">
+          <option value="IST">IST</option>
+          <option value="UTC" selected>UTC</option>
+          <option value="CET">CET</option>
+          <option value="EST">EST</option>
+        </select>
+
+      </div>
+      <div class="time-convert-button-section convert-time-common-sub">
+        <button type="submit" class="convert-time-button">Convert Time</button>
+      </div>
+    </div>
+
+
+    <!-- Section 3 -->
+    <div class="show-result-time convert-time-common">
+      {{convertedTime}}
+      <p *ngIf="!convertedTime">Show result</p>
+    </div>
+  </form>
+</div>

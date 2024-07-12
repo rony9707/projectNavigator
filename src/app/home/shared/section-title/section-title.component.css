@@ -1,0 +1,12 @@
+.section-title{
+  position: absolute;
+  top:-18px;
+  left:10px;
+  font-size: 20px;
+  width: 250px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #E4C59E;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}

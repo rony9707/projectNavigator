@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  /* background-image: url('./assets/img/cover.jpg'); */
+  /* Replace 'your-image-url.jpg' with the path to your image */
+  margin: 0;
+  --background-color-main: #2F3645;
+  --font-color-main: black;
+  --color-section: #FFECD6;
+}

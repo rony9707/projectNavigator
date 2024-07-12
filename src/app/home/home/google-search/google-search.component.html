@@ -1,0 +1,6 @@
+<div class="input-box-div" >
+  <input #googlesearch type="text" class="google-search" (focus)="inputFocus()" 
+  (blur)="inputBlur()" (keydown.enter)="onEnter(googlesearch.value)" appSectionBorder/>
+  <div #placeholder class="search-placeholder">Google Search</div>
+  <img src="assets/svg/search.svg" class="search" alt="SVG Image" (click)="onSearch(googlesearch.value)">
+</div>
