@@ -80,6 +80,7 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         this.hourPicker1.nativeElement.value = ''
         this.hourPicker2.nativeElement.value = ''
+        this.hourPicker1.nativeElement.focus();
       }, 300)
     }
 
@@ -94,6 +95,7 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         this.minutePicker1.nativeElement.value = ''
         this.minutePicker2.nativeElement.value = ''
+        this.minutePicker1.nativeElement.focus();
       }, 300)
     }
   }
@@ -129,12 +131,9 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
       let ampm_value = ampm ? "AM" : "PM";
   
       let inputTime = `${hour1}${hour2}:${minute1}${minute2} ${ampm_value}`;
-      console.log(`Input Time: ${inputTime}`);
   
       let TimeZoneFrom = this.form.value.timeZoneSelectfrom;
       let TimeZoneTo = this.form.value.timeZoneSelectto;
-      console.log(`From Timezone: ${TimeZoneFrom}`);
-      console.log(`To Timezone: ${TimeZoneTo}`);
   
       // Map your form values to moment-timezone compatible identifiers if needed
       let fromZone = this.mapTimeZoneIdentifier(TimeZoneFrom);
