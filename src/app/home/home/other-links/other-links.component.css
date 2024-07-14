@@ -1,0 +1,28 @@
+:host{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 15px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.other-link-class{
+  border: 1px solid black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: #67eedf; 
+  transition: .3s;
+  width: 100%;
+  cursor: pointer;
+}
+
+.other-link-class:hover{
+  transform: scale(1.04);
+}
