@@ -8,6 +8,8 @@ import { GoogleSearchComponent } from './home/google-search/google-search.compon
 import { HomeRoutingModule } from './home-routing.module';
 import { EnvLinksComponent } from './home/env-links/env-links.component';
 import { SectionTitleComponent } from './shared/section-title/section-title.component';
+import { OtherLinksComponent } from './home/other-links/other-links.component';
+import { TodoListComponent } from './home/todo-list/todo-list.component';
 
 
 
@@ -19,7 +21,9 @@ import { SectionTitleComponent } from './shared/section-title/section-title.comp
     SectionBorderDirective,
     GoogleSearchComponent,
     EnvLinksComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    OtherLinksComponent,
+    TodoListComponent
   ],
   imports: [
     CommonModule,

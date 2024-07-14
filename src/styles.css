@@ -6,4 +6,27 @@ body {
   --background-color-main: #2F3645;
   --font-color-main: black;
   --color-section: #FFECD6;
+  font-family: "Rubik", sans-serif;
+}
+
+
+body::-webkit-scrollbar {
+  width: .5vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(27, 27, 27, 0.333);
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #161212;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+
+body::-webkit-scrollbar-track:hover {
+  background-color: #d3d3d3;
 }

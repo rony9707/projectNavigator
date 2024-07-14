@@ -29,15 +29,18 @@
     <div class="select-time convert-time-common">
       <div class="select-time-sub">
         <input class="time-picker-input" #hourPicker1 (input)="moveFocus($event, hourPicker2)" (input)="hourPicker()"
-          name="hour1" ngModel type="number" min="0" max="9" placeholder="h" required />
+          name="hour1" ngModel type="number" (keypress)="onlyNumbers($event)" min="0" max="9" placeholder="h"
+          required />
         <input class="time-picker-input" #hourPicker2 (input)="moveFocus($event, minutePicker1)" (input)="hourPicker()"
-          name="hour2" ngModel type="number" min="0" max="9" placeholder="h" required />
+          name="hour2" ngModel type="number" (keypress)="onlyNumbers($event)" min="0" max="9" placeholder="h"
+          required />
       </div>
       <div class="select-time-sub">
         <input class="time-picker-input" #minutePicker1 (input)="moveFocus($event, minutePicker2)"
-          (input)="minutePicker()" name="minute1" ngModel type="number" min="0" max="9" placeholder="m" required />
+          (input)="minutePicker()" name="minute1" ngModel type="number" (keypress)="onlyNumbers($event)" min="0" max="9"
+          placeholder="m" required />
         <input class="time-picker-input" #minutePicker2 (input)="minutePicker()" name="minute2" ngModel type="number"
-          min="0" max="9" placeholder="m" required />
+          (keypress)="onlyNumbers($event)" min="0" max="9" placeholder="m" required />
       </div>
       <div class="select-time-sub">
         <input class="ampmtoggle-checkbox" type="checkbox" id="ampmtoggle" [(ngModel)]="ampm" name="ampmtoggle" checked>

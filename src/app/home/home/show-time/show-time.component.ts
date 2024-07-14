@@ -115,11 +115,22 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
     }
   }
 
+  //Function which will help to type only and numbers
+  onlyNumbers(event: KeyboardEvent) {
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if ((charCode > 47 && charCode < 58)) {
+      return true;
+    } else {
+      event.preventDefault();
+      return false;
+    }
+  }
+
 
   @ViewChild('convertTime') form!: NgForm
-  selectedTimeZoneFrom='IST'
-  selectedTimeZoneTo='UTC'
-  convertedTime:string | undefined
+  selectedTimeZoneFrom = 'IST'
+  selectedTimeZoneTo = 'UTC'
+  convertedTime: string | undefined
 
   OnConvertTime() {
     if (this.form.valid) {
@@ -129,19 +140,19 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
       let minute2 = this.form.value.minute2;
       let ampm = this.form.value.ampmtoggle;
       let ampm_value = ampm ? "AM" : "PM";
-  
+
       let inputTime = `${hour1}${hour2}:${minute1}${minute2} ${ampm_value}`;
-  
+
       let TimeZoneFrom = this.form.value.timeZoneSelectfrom;
       let TimeZoneTo = this.form.value.timeZoneSelectto;
-  
+
       // Map your form values to moment-timezone compatible identifiers if needed
       let fromZone = this.mapTimeZoneIdentifier(TimeZoneFrom);
       let toZone = this.mapTimeZoneIdentifier(TimeZoneTo);
-  
+
       // Perform the conversion
       let convertedTime = moment.tz(inputTime, 'hhmm A', fromZone).tz(toZone).format('hh:mm A');
-      this.convertedTime=convertedTime
+      this.convertedTime = convertedTime
     } else {
       swal.fire({
         title: "Error",
@@ -151,7 +162,7 @@ export class ShowTimeComponent implements OnInit, OnDestroy {
         timerProgressBar: true, // Show progress bar
         showConfirmButton: false // Hide the "OK" button
       });
-      
+
     }
   }
 

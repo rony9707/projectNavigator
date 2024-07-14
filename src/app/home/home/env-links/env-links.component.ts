@@ -6,7 +6,7 @@ import { ApplicationLink } from '../home.interface';
   templateUrl: './env-links.component.html',
   styleUrls: ['./env-links.component.css']
 })
-export class EnvLinksComponent implements OnInit, OnChanges {
+export class EnvLinksComponent implements OnInit {
 
   @Input() applicationLinks: ApplicationLink[] = [];
 
@@ -15,8 +15,5 @@ export class EnvLinksComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-      console.log("env link ",this.applicationLinks)
-  }
 
 }

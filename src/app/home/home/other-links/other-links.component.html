@@ -1,0 +1,10 @@
+<!-- src/app/other-links/other-links.component.html -->
+<div *ngFor="let item of OtherLink">
+  <ng-container *ngIf="isLink(item); else copyTemplate">
+    <a class="other-link-class" [href]="item.linkUrl" target="_target">{{ item.linkName }}</a>
+  </ng-container>
+  <ng-template #copyTemplate>
+    <button class="other-link-class" (click)="copyText(item.copyText)" *ngIf="isCopy(item)">{{ item.linkName }}</button>
+  </ng-template>
+</div>
+<app-section-title [sectionTitle]="'Other Links'" [left]=7></app-section-title>
