@@ -8,17 +8,13 @@ import swal from 'sweetalert2';
   templateUrl: './other-links.component.html',
   styleUrls: ['./other-links.component.css']
 })
-export class OtherLinksComponent implements OnInit, OnChanges {
+export class OtherLinksComponent implements OnInit {
 
   @Input() OtherLink: OtherLink[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("other", this.OtherLink); // I can see data here
   }
 
   isLink(item: OtherLink): item is Link {

@@ -10,8 +10,7 @@ import { EnvLinksComponent } from './home/env-links/env-links.component';
 import { SectionTitleComponent } from './shared/section-title/section-title.component';
 import { OtherLinksComponent } from './home/other-links/other-links.component';
 import { TodoListComponent } from './home/todo-list/todo-list.component';
-
-
+import { DownloadLinksComponent } from './home/download-links/download-links.component';
 
 
 @NgModule({
@@ -23,7 +22,8 @@ import { TodoListComponent } from './home/todo-list/todo-list.component';
     EnvLinksComponent,
     SectionTitleComponent,
     OtherLinksComponent,
-    TodoListComponent
+    TodoListComponent,
+    DownloadLinksComponent
   ],
   imports: [
     CommonModule,

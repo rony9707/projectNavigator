@@ -16,7 +16,8 @@ export class UploadFileComponent implements OnInit {
   jsonData: any = null;
   fileName: string = '';
   fileSize: number = 0;
-
+  itemToDownload="assets/demo_template.json"
+  
   ngOnInit(): void {
 
 
@@ -24,7 +25,6 @@ export class UploadFileComponent implements OnInit {
 
 
   onFileSelected(event: any): void {
-    console.log(event.target.files)
     //If more than one file is recevied, it will throw error
     if (event.target.files.length > 1) {
       swal.fire({
@@ -104,7 +104,6 @@ export class UploadFileComponent implements OnInit {
 
 //Go diretly to home with this button click if data is present in localhost
   goDirectlyToHome() {
-    console.log(this.sentJson.getJsonData())
     if (this.sentJson.getJsonData() != null) {
       this.router.navigate(['home']);
     }

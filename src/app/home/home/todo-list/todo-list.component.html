@@ -1,19 +1,22 @@
 <div class="todo-main">
   <div class="input-form">
-    <textarea type="text" class="todo-input-box" (keydown.enter)="addTodoItem(todoText)" #todoText></textarea>
+    <textarea type="text" placeholder="Add a task" class="todo-input-box" (keydown.enter)="addTodoItem(todoText)"
+      #todoText></textarea>
   </div>
   <div class="input-form-button">
     <button class="submit-button" (click)="addTodoItem(todoText)">ADD TASK</button>
   </div>
   <div class="show-todo-items" #showallIteams>
     <ng-container *ngFor="let link of TodoTaskList">
-      <div class="single-todo-item" @itemAnimation>
-        <div class="todoText" *ngIf="!link.isEditing" [innerHTML]="link.text"></div>
-        <textarea class="edit-input-box" *ngIf="link.isEditing" [(ngModel)]="link.text" (keydown.enter)="saveEdit(link)"></textarea>
-
+      <div class="single-todo-item" (dblclick)="editTask(link)" @itemAnimation>
+        <div class="todoText" *ngIf="!link.isEditing"   [innerHTML]="link.text"></div>
+        <textarea class="edit-input-box" *ngIf="link.isEditing" [(ngModel)]="link.text"
+          (keydown.enter)="saveEdit(link)"></textarea>
         <div class="group-todo-button">
-          <img src="assets/svg/edit.svg" class="editsave" *ngIf="!link.isEditing" (click)="editTask(link)" alt="SVG Image">
-          <img src="assets/svg/save.svg" class="editsave" *ngIf="link.isEditing" (click)="saveEdit(link)" alt="SVG Image">
+          <img src="assets/svg/edit.svg" class="editsave" *ngIf="!link.isEditing" (click)="editTask(link)"
+            alt="SVG Image">
+          <img src="assets/svg/save.svg" class="editsave" *ngIf="link.isEditing" (click)="saveEdit(link)"
+            alt="SVG Image">
           <img src="assets/svg/x2.svg" class="todoRemoveButton" (click)="removeTask(link.key)" alt="SVG Image">
         </div>
       </div>

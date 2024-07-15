@@ -8,6 +8,7 @@
   flex-direction: column;
   background-color: var(--background-color-main);
   color: var(--font-color-main);
+  position: relative;
 }
 
 .upload-file-main{
@@ -141,4 +142,22 @@
 .button-two:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+
+.download-div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.download-logo-svg {
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.download-logo-svg:hover {
+  transform: translateY(5px);
 }

@@ -1,0 +1,13 @@
+<ng-container *ngFor="let item of DownloadLink">
+  <div class="download-item">
+    <div class="download-logo">
+      <a [href]="item.downloadFileURL" id="download" download>
+        <img src="assets/svg/download.svg" for="download" class="download-logo-svg" alt="SVG Image">
+      </a>
+    </div>
+    <div class="download-description">
+      {{item.downloadFile}}
+    </div>
+  </div>
+</ng-container>
+<app-section-title [sectionTitle]="'Download Links'" [left]=7></app-section-title>

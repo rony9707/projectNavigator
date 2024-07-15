@@ -24,3 +24,9 @@ export interface Copy {
 }
 
 export type OtherLink = Link | Copy;
+
+// application-link.model.ts
+export interface DownloadLink {
+  downloadFile: string;
+  downloadFileURL: string;
+}
