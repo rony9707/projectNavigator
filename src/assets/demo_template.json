@@ -1,0 +1,107 @@
+{
+  "projectTitle": [
+    {
+      "title": "Project Title"
+    }
+  ],
+  "applicationLinks": [
+    {
+      "environmentName": "PRD",
+      "environmentLink": "https://www.google.com"
+    },
+    {
+      "environmentName": "DEV",
+      "environmentLink": "https://www.google.com"
+    },
+    {
+      "environmentName": "UAT",
+      "environmentLink": "https://www.google.com"
+    },
+    {
+      "environmentName": "TST",
+      "environmentLink": "https://www.google.com"
+    },
+    {
+      "environmentName": "HFX",
+      "environmentLink": "https://www.google.com"
+    }
+  ],
+  "otherLinks": [
+    {
+      "linkName": "Link1",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link2",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link3",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link4",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link5",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link6",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link7",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link8",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Link9",
+      "linkUrl": "https://www.google.com"
+    },
+	{
+      "linkName": "Copy1",
+      "copyText": "Cat mew mew",
+	  "copyFlag": "True"
+    },
+	{
+      "linkName": "Copy2",
+      "copyText": "Cat me32141234w mew",
+	  "copyFlag": "True"
+    },
+	{
+      "linkName": "Link10",
+      "linkUrl": "https://www.google.com"
+    }
+  ],
+  "downloadLinks": [
+    {
+      "downloadFile": "Postman",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    },
+    {
+      "downloadFile": "Google",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    },
+    {
+      "downloadFile": "Cat",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    },
+    {
+      "downloadFile": "Dog",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    },
+    {
+      "downloadFile": "No More Idea",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    },
+    {
+      "downloadFile": "No More Idea",
+      "downloadFileURL": "https://pixabay.com/get/g754895d390fcfd62c4c1f1f93c23ad29b49efa47b23f8ef63b5b3ab3f541be041625c4d8d89ed1cca96d15c4bdd03dec40316bf2f75239a969d4f6bab48a10bb615a0505223cef6cc53ce6079093c55c_1280.png"
+    }
+  ]
+}

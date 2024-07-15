@@ -1,0 +1,58 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.download-item {
+  width: 100%; /* Ensures that each item occupies the full width of the grid cell */
+  margin-bottom: 10px;
+  height: 160px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.download-logo{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: aqua;
+}
+
+.download-logo-svg{
+  width: 40px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.download-logo-svg:hover{
+  transform: scale(1.4);
+}
+
+.download-description{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}

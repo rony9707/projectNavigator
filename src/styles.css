@@ -30,3 +30,5 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-track:hover {
   background-color: #d3d3d3;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
