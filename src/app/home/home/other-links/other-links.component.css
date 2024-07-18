@@ -1,4 +1,4 @@
-:host{
+:host {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   gap: 15px;
@@ -6,7 +6,25 @@
   width: 100%;
 }
 
-.other-link-class{
+.copy-container {
+  position: relative;
+}
+
+.copy-text {
+  position: absolute;
+  top: -10px;  /* Correct unit provided */
+  left: -10px;  /* Correct unit provided */
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(0, 0, 0); /* Adjust the color as needed */
+  background-color: rgb(158, 155, 253); /* Adjust the background color as needed */
+  padding: 10px;
+  z-index: 10;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.other-link-class {
   border: 1px solid black;
   height: 100px;
   display: flex;
@@ -18,11 +36,16 @@
   font-weight: 500;
   border-radius: 4px;
   background-color: #67eedf; 
-  transition: .3s;
+  transition: transform 0.3s;
   width: 100%;
   cursor: pointer;
+  position: relative;  /* Ensures proper positioning of the "COPY" text */
 }
 
-.other-link-class:hover{
+.other-link-class:hover {
+  transform: scale(1.04);
+}
+
+.other-link-class:hover .copy-text {
   transform: scale(1.04);
 }

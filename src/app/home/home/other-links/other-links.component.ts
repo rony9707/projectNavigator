@@ -25,7 +25,7 @@ export class OtherLinksComponent implements OnInit {
     return 'copyFlag' in item;
   }
 
-  copyText(text: string) {
+  copyText(copyTitle: string, text: string) {
     const textarea = document.createElement('textarea');
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -33,7 +33,7 @@ export class OtherLinksComponent implements OnInit {
     document.execCommand('copy');
 
     swal.fire({
-      text: 'Copied to Clipboard!',
+      text: `${copyTitle} Copied to Clipboard!`,
       icon: 'success',
       timer: 1500, // Auto close after 1.5 seconds
       timerProgressBar: true, // Show progress bar
