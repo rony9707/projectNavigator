@@ -11,6 +11,7 @@ import { SectionTitleComponent } from './shared/section-title/section-title.comp
 import { OtherLinksComponent } from './home/other-links/other-links.component';
 import { TodoListComponent } from './home/todo-list/todo-list.component';
 import { DownloadLinksComponent } from './home/download-links/download-links.component';
+import {DragDropModule} from '@angular/cdk/drag-drop'; 
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DownloadLinksComponent } from './home/download-links/download-links.com
   imports: [
     CommonModule,
     FormsModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    DragDropModule 
   ]
 })
 export class HomeModule { }

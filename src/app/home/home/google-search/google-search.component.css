@@ -37,6 +37,7 @@
   pointer-events: none;
   opacity: .5;
   width: 200px;
+  color: rgb(0, 0, 0);
 }
 
 .search{

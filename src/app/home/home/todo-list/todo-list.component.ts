@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import swal from 'sweetalert2';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 interface TodoTask {
   key: string;
@@ -58,6 +59,10 @@ export class TodoListComponent implements OnInit, AfterViewInit {
   private detectDeviceType() {
     const isDesktop = window.innerWidth >= 806;
     this.setMaxHeight(isDesktop);
+  }
+
+  drop(event: CdkDragDrop<any[]>): void {
+    moveItemInArray(this.TodoTaskList, event.previousIndex, event.currentIndex);
   }
 
 

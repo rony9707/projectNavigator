@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { JsonServiceService } from 'src/app/services/json-service.service';
 import { ApplicationLink, DownloadLink, OtherLink, ProjectTitle } from './home.interface';
@@ -8,7 +8,7 @@ import { ApplicationLink, DownloadLink, OtherLink, ProjectTitle } from './home.i
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   jsonData: any;
   private subscription: Subscription | undefined;
@@ -31,6 +31,13 @@ export class HomeComponent implements OnInit {
     console.log('Received Application LInks are:', this.applicationLinks);
     console.log('Received Other Links are:', this.otherLinks);
     console.log('Received Download Links are:', this.downloadLinks);
+  }
+
+  ngAfterViewInit() {
+    const videoElement = document.querySelector('video');
+    if (videoElement) {
+      videoElement.play();
+    }
   }
 
 

@@ -15,7 +15,7 @@
   <app-env-links [applicationLinks]="applicationLinks"></app-env-links>
 </div>
 
-<div class="section-4">
+<!-- <div class="section-4">
   <div class="section-4-1 section-4-common" appSectionBorder>
     <app-other-links [OtherLink]="otherLinks"></app-other-links>
   </div>
@@ -29,5 +29,27 @@
   <div class="section-5-1 section-5-common" appSectionBorder>
     <app-download-links [DownloadLink]="downloadLinks"></app-download-links>
   </div>
+</div> -->
+
+<div class="section-4">
+
+
+  <div class="left-4 common-4">
+
+    <div class="sec-4-sub-common" appSectionBorder>
+      <app-other-links [OtherLink]="otherLinks"></app-other-links>
+    </div>
+
+    <div class="download-links-main sec-4-sub-common" appSectionBorder>
+      <app-download-links [DownloadLink]="downloadLinks"></app-download-links>
+    </div>
+  </div>
+
+  <div class="left-4 common-4">
+    <div class="sec-4-sub-common" appSectionBorder>
+      <app-todo-list></app-todo-list>
+    </div>
+  </div>
+
 
 </div>
