@@ -19,6 +19,7 @@
   height: 80%;
   width: 80%;
   border: 1px solid black;
+  color:rgb(0, 0, 0);
   /* border: 1px solid var(--primaryColor);
   border-radius: 5px;
   background-color: var(--primaryColor);
@@ -32,6 +33,7 @@ table {
   border-collapse: collapse;
   font-size: 20px;
 }
+
 
 th, td {
   padding: 15px;
@@ -57,7 +59,6 @@ tr {
 
 .convert-time-common{
   height: 33.3%;
-  border: 1px solid black;
   flex: 1;
 }
 
@@ -100,6 +101,10 @@ input[type='number'] {
     appearance: textfield;
 }
 
+
+.time-picker-input:focus{
+  border: 2px solid black;
+}
 
 
 .ampmtoggle-checkbox{
@@ -176,6 +181,13 @@ input[type='number'] {
   height: 100%;
   text-align: center;
   border-radius: 4px;
+
+}
+
+.timeZoneSelect option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Custom arrow styling for select box */
@@ -216,6 +228,7 @@ input[type='number'] {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .convert-time-button:hover {

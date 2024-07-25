@@ -1,9 +1,15 @@
-:host{
+:host {
   background-color: #96C9F4;
   display: block;
-  color:rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   font-family: "Rubik", sans-serif;
   padding-bottom: 30px;
+  background-image: url('../../../assets/bg-main.jpg');
+  background-size: cover;
+  /* Cover the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
 }
 
 .section-1 {
@@ -25,41 +31,18 @@
   align-items: center;
   box-sizing: border-box;
   text-align: center;
+  color: white;
 }
 
-.section-2{
+.section-2 {
   cursor: default;
   padding: 5px;
 }
 
-.section-3{
+.section-3 {
   cursor: default;
   padding: 5px;
 }
-
-.section-4{
-  cursor: default;
-  display: flex;
-  padding-top: 25px;
-  margin: 0px 10px 0px 10px;
-  justify-content: space-between;
-}
-
-.section-4-common{
-  position: relative;
-  box-sizing: border-box;
-  padding: 10px;
-  margin: 0px 5px 0px 5px;
-}
-
-.section-4-1{
-  width: 49%;
-}
-
-.section-4-2{
-  width: 49%;
-}
-
 
 .sec-2-time {
   display: flex;
@@ -67,24 +50,22 @@
   justify-content: center;
 }
 
-.section-5{
-  cursor: default;
+.section-4 {
   display: flex;
-  padding-top: 25px;
-  margin: 0px 10px 0px 10px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.section-5-common{
-  position: relative;
-  box-sizing: border-box;
-  padding: 10px;
-  margin: 0px 5px 0px 5px;
-}
-
-.section-5-1{
+.common-4 {
   width: 49%;
-  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.download-links-main {
+  margin-top: 25px;
+}
+
+.sec-4-sub-common {
+  padding: 3px 8px 3px 8px;
 }
 
 
@@ -97,26 +78,17 @@
     width: 100%;
   }
 
-  .section-4{
+
+  .section-4 {
     flex-direction: column;
   }
 
-  .section-4-1{
+  .common-4 {
     width: 100%;
-    margin: 0px 0px 0px 0px;
-  }
-  
-  .section-4-2{
-    width: 100%;
-    margin: 40px 0px 0px 0px;
   }
 
-  .section-5-1{
-    width: 100%;
-    border: 1px solid black;
+  .left-4{
+    margin-top: 25px;
   }
-  
-  
+
 }
-
-

@@ -4,7 +4,10 @@
     <a class="other-link-class" [href]="item.linkUrl" target="_target">{{ item.linkName }}</a>
   </ng-container>
   <ng-template #copyTemplate>
-    <button class="other-link-class" (click)="copyText(item.copyText)" *ngIf="isCopy(item)">{{ item.linkName }}</button>
+    <div class="copy-container">
+      <span class="copy-text" *ngIf="isCopy(item)">COPY</span>
+      <a class="other-link-class" (click)="copyText(item.linkName,item.copyText)" *ngIf="isCopy(item)">{{ item.linkName }}</a>
+    </div>
   </ng-template>
 </div>
 <app-section-title [sectionTitle]="'Other Links'" [left]=7></app-section-title>

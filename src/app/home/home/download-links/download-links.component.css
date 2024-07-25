@@ -5,52 +5,60 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   place-items: center;
   gap: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
   box-sizing: border-box;
 }
 
 .download-item {
-  width: 100%; /* Ensures that each item occupies the full width of the grid cell */
+  width: 100%;
+  /* Ensures that each item occupies the full width of the grid cell */
   margin-bottom: 10px;
   height: 160px;
-  border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: .9;
+  color: white;
+  transition: .5s;
+}
+
+.download-item:hover {
+  transition: .5s;
+  outline: 5px solid rgba(0, 0, 0, 0.9);
 }
 
 
-.download-logo{
+.download-logo {
   height: 60%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  background-color: aqua;
+  background-color: rgb(80, 240, 171);
 }
 
-.download-logo-svg{
+.download-logo-svg {
   width: 40px;
   cursor: pointer;
   transition: .3s;
 }
 
-.download-logo-svg:hover{
+.download-logo-svg:hover {
   transform: scale(1.4);
 }
 
-.download-description{
+.download-description {
   height: 40%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  background-color: cornflowerblue;
+  background-color: rgba(128, 50, 246, 0.683);
   padding: 5px;
   text-align: center;
   font-size: 15px;

@@ -1,4 +1,4 @@
-:host{
+:host {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   gap: 15px;
@@ -6,8 +6,26 @@
   width: 100%;
 }
 
-.other-link-class{
-  border: 1px solid black;
+.copy-container {
+  position: relative;
+}
+
+.copy-text {
+  position: absolute;
+  top: -10px;  /* Correct unit provided */
+  left: -10px;  /* Correct unit provided */
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(0, 0, 0); /* Adjust the color as needed */
+  background-color: #77B0AA; /* Adjust the background color as needed */
+  padding: 10px;
+  z-index: 10;
+  border-radius: 4px;
+  transition: transform 0.3s;
+  opacity: .95;
+}
+
+.other-link-class {
   height: 100px;
   display: flex;
   align-items: center;
@@ -17,12 +35,20 @@
   font-size: 20px;
   font-weight: 500;
   border-radius: 4px;
-  background-color: #67eedf; 
-  transition: .3s;
+  background-color: #003C43; 
+  transition: transform 0.3s;
   width: 100%;
+  color:white;
   cursor: pointer;
+  position: relative;  /* Ensures proper positioning of the "COPY" text */
+  opacity: .9;
 }
 
-.other-link-class:hover{
+.other-link-class:hover {
+  transform: scale(1.04);
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.other-link-class:hover .copy-text {
   transform: scale(1.04);
 }

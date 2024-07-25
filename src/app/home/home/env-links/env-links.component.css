@@ -13,26 +13,29 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   gap: 15px;
   justify-content: center;
-  border: 1px solid black;
   padding: 10px;
 }
 
 .env-sub{
   margin-top: 15px;
-  border: 1px solid black;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: black;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 700;
   border-radius: 4px;
-  background-color: #80B9AD; 
+  background-color: #DBA979; 
   transition: .5s;
+  color: white;
+  opacity: .9;
 }
 
 .env-sub:hover{
-  background-color: #6295A2;
+  background-color: #E8EFCF;
+  opacity: 1;
+  outline: 1px solid rgba(0, 0, 0, 0.18);
+  color: black;
 }
