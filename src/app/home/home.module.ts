@@ -12,7 +12,7 @@ import { OtherLinksComponent } from './home/other-links/other-links.component';
 import { TodoListComponent } from './home/todo-list/todo-list.component';
 import { DownloadLinksComponent } from './home/download-links/download-links.component';
 import {DragDropModule} from '@angular/cdk/drag-drop'; 
-
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     CommonModule,
     FormsModule,
     HomeRoutingModule,
-    DragDropModule 
+    DragDropModule ,
+    MatSliderModule
   ]
 })
 export class HomeModule { }

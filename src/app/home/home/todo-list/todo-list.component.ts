@@ -44,41 +44,51 @@ export class TodoListComponent implements OnInit, AfterViewInit {
         this.TodoTaskList.push({ key: key, text: localStorageText });
       }
     }
+    this.sortTaskList()
+  }
+
+  sortTaskList() {
+    this.TodoTaskList.sort((a, b) => {
+      const timeA = parseInt(a.key.split('_')[1], 10);
+      const timeB = parseInt(b.key.split('_')[1], 10);
+
+      return timeB - timeA;
+    });
   }
 
   ngAfterViewInit() {
-    this.setMaxHeight();
-    this.detectDeviceType();
+    // this.setMaxHeight();
+    // this.detectDeviceType();
   }
 
-  @HostListener('window:resize', [])
-  onResize() {
-    this.detectDeviceType();
-  }
+  // @HostListener('window:resize', [])
+  // onResize() {
+  //   this.detectDeviceType();
+  // }
 
-  private detectDeviceType() {
-    const isDesktop = window.innerWidth >= 806;
-    this.setMaxHeight(isDesktop);
-  }
+  // private detectDeviceType() {
+  //   const isDesktop = window.innerWidth >= 806;
+  //   this.setMaxHeight(isDesktop);
+  // }
 
   drop(event: CdkDragDrop<any[]>): void {
     moveItemInArray(this.TodoTaskList, event.previousIndex, event.currentIndex);
   }
 
 
-  private setMaxHeight(isDesktop: boolean = true) {
-    if (this.showallIteams && this.showallIteams.nativeElement) {
-      let currentHeight = this.showallIteams.nativeElement.offsetHeight;
-      let maxHeight = 0;
-      if (isDesktop) {
-        maxHeight = currentHeight;
-        this.renderer.setStyle(this.showallIteams.nativeElement, 'flex', '1');
-      } else {
-        maxHeight = 500;
-      }
-      this.renderer.setStyle(this.showallIteams.nativeElement, 'max-height', maxHeight + 'px');
-    }
-  }
+  // private setMaxHeight(isDesktop: boolean = true) {
+  //   if (this.showallIteams && this.showallIteams.nativeElement) {
+  //     let currentHeight = this.showallIteams.nativeElement.offsetHeight;
+  //     let maxHeight = 0;
+  //     if (isDesktop) {
+  //       maxHeight = currentHeight;
+  //       this.renderer.setStyle(this.showallIteams.nativeElement, 'flex', '1');
+  //     } else {
+  //       maxHeight = 500;
+  //     }
+  //     this.renderer.setStyle(this.showallIteams.nativeElement, 'max-height', maxHeight + 'px');
+  //   }
+  // }
 
   addTodoItem(todo: HTMLTextAreaElement) {
     let todoText = todo.value.trim();

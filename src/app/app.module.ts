@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { FileSizePipe } from './pipes/file-size.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

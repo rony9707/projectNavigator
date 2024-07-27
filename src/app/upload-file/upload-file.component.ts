@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { JsonServiceService } from '../services/json-service.service';
+import { MusicService } from '../services/music.service';
+import { MatSliderChange } from '@angular/material/slider';
 
 @Component({
   selector: 'app-upload-file',
@@ -10,18 +12,19 @@ import { JsonServiceService } from '../services/json-service.service';
 })
 export class UploadFileComponent implements OnInit {
 
-  constructor(private router: Router, public sentJson: JsonServiceService) { }
+  constructor(private router: Router, public sentJson: JsonServiceService, public musicService: MusicService) { }
 
   selectedFile: File | null = null;
   jsonData: any = null;
   fileName: string = '';
   fileSize: number = 0;
-  itemToDownload="assets/demo_template.json"
-  
+  itemToDownload = "assets/demo_template.json"
+  music_status = this.musicService.music_status;
+  musicUrl=""
+
   ngOnInit(): void {
-
-
   }
+  
 
 
   onFileSelected(event: any): void {
@@ -66,8 +69,11 @@ export class UploadFileComponent implements OnInit {
     fileReader.onload = (e) => {
       try {
         this.jsonData = JSON.parse(fileReader.result as string);
+        // Handle form submission with JSON data
+        this.sentJson.setJsonData(this.jsonData);
+        //console.log(this.musicUrl)
       } catch (error) {
-        console.log(error)
+        alert(error)
         swal.fire({
           title: "Error",
           text: 'Error reading JSON file',
@@ -85,10 +91,7 @@ export class UploadFileComponent implements OnInit {
   //Button Submit 
   onSubmit(): void {
     if (this.jsonData) {
-      // Handle form submission with JSON data
-      this.sentJson.setJsonData(this.jsonData);
       this.router.navigate(['home']);
-
     } else {
       swal.fire({
         title: "Error",
@@ -102,11 +105,21 @@ export class UploadFileComponent implements OnInit {
   }
 
 
-//Go diretly to home with this button click if data is present in localhost
+  //Go diretly to home with this button click if data is present in localhost
   goDirectlyToHome() {
     if (this.sentJson.getJsonData() != null) {
       this.router.navigate(['home']);
     }
   }
 
+
+
+  musicplay() {
+    this.music_status = !this.musicService.music_status
+    this.musicService.musicStartStop(!this.musicService.music_status);
+  }
+
+  volumeLevel(event:any){
+    this.musicService.adjustVolumeSong(event.value)
+  }
 }
