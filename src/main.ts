@@ -10,3 +10,12 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+let Title = ''
+
+const jsonData = localStorage.getItem('jsonData_Project');
+if (jsonData) {
+  document.title = JSON.parse(jsonData).projectTitle[0].title
+} else {
+  document.title="Project Navigator"
+}

@@ -36,7 +36,7 @@
 
   <div class="left-4 common-4">
 
-    <div class="sec-4-sub-common" appSectionBorder>
+    <div class="other-links-main  sec-4-sub-common" appSectionBorder>
       <app-other-links [OtherLink]="otherLinks"></app-other-links>
     </div>
 
@@ -45,11 +45,18 @@
     </div>
   </div>
 
-  <div class="left-4 common-4">
+  <div class="right-4 common-4">
     <div class="sec-4-sub-common" appSectionBorder>
       <app-todo-list></app-todo-list>
     </div>
   </div>
 
 
+</div>
+
+
+<div class="music-div">
+  <img *ngIf="music_status" src="assets/svg/music_start2.svg" class="music music-animation" (click)="musicplay()" alt="SVG Image">
+  <img *ngIf="!music_status" src="assets/svg/music_stop2.svg" class="music" (click)="musicplay()" alt="SVG Image">
+  <mat-slider thumbLabel (input)="volumeLevel($event)"  *ngIf="music_status && musicService.getMusicURL()" class="volume-slider" min="1" max="100" step="1" [value]="musicService.volume"></mat-slider>
 </div>

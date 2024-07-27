@@ -68,6 +68,50 @@
   padding: 3px 8px 3px 8px;
 }
 
+.music-div{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.music {
+  width: 55px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.music-animation {
+  display: inline-block;
+  position: relative; /* Ensure the element is positioned relative to its normal position */
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+
+::ng-deep .mat-slider-thumb {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+::ng-deep .mat-slider-track-fill {
+  background-color: white !important;
+}
+
+::ng-deep .volume-slider .mat-slider-thumb-label {
+  background-color: rgb(0, 250, 246) !important;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px); /* Adjust this value to control the up distance */
+  }
+  25%, 75% {
+    transform: translateY(3px); /* Adjust this value to control the down distance */
+  }
+}
 
 @media(max-width:806px) {
   .section-1 {
@@ -87,8 +131,22 @@
     width: 100%;
   }
 
+  .other-links-main{
+    margin-bottom: 25px;
+  }
+
   .left-4{
+    order:2;
     margin-top: 25px;
+  }
+
+  .right-4{
+    order: 1;
+    margin-top: 25px;
+  }
+
+  .sec-4-sub-common {
+    margin: 0px 5px 0px 5px;
   }
 
 }
