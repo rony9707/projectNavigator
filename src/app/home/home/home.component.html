@@ -56,7 +56,7 @@
 
 
 <div class="music-div">
-  <img *ngIf="music_status" src="assets/svg/music_start2.svg" class="music music-animation" (click)="musicplay()" alt="SVG Image">
-  <img *ngIf="!music_status" src="assets/svg/music_stop2.svg" class="music" (click)="musicplay()" alt="SVG Image">
+  <img *ngIf="!music_status" src="assets/svg/music_start2.svg" class="music music-animation" (click)="musicplay()" alt="SVG Image">
+  <img *ngIf="music_status" src="assets/svg/music_stop2.svg" class="music" (click)="musicplay()" alt="SVG Image">
   <mat-slider thumbLabel (input)="volumeLevel($event)"  *ngIf="music_status && musicService.getMusicURL()" class="volume-slider" min="1" max="100" step="1" [value]="musicService.volume"></mat-slider>
 </div>
