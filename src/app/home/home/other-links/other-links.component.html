@@ -1,7 +1,7 @@
 <!-- src/app/other-links/other-links.component.html -->
 <div *ngFor="let item of OtherLink">
   <ng-container *ngIf="isLink(item); else copyTemplate">
-    <a class="other-link-class" [href]="item.linkUrl" target="_target">{{ item.linkName }}</a>
+    <a class="other-link-class" [href]="item.linkUrl" target="_blank">{{ item.linkName }}</a>
   </ng-container>
   <ng-template #copyTemplate>
     <div class="copy-container">
